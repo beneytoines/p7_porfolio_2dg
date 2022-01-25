@@ -1,0 +1,276 @@
+<!DOCTYPE htmL>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Llocs del món</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300&family=Krub:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 32px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        a{
+            text-decoration: none;
+            color: var(--blau2);
+            margin: 20px;
+            text-transform: uppercase;
+            font-family: var(--krub);
+        }
+        :root{
+            --verd: #61867F;
+            --blau1: #6186A2;
+            --blau2: #61737F;
+            --gris: #D9D9D9;
+            --krub: 'Krub', sans-serif;
+            --barlow: 'Barlow', sans-serif;
+            --negrita: 700;
+        }
+        .container{
+            padding: 0 2em;
+        }
+        /*Aquí va el header*/
+        body>header{
+            padding: 50px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            background-color: var(--gris);
+        }
+        h1{
+            font-family: var(--krub);
+            font-weight: var(--negrita);
+            color: var(--verd);
+            font-size: 1.2em;
+        }
+        h2{
+            font-family: 'Barlow', sans-serif;
+            color: black;
+            font-weight: 400;
+            font-size: 1.2em;
+        }
+        h3{
+            font-family: var(--krub);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1em;
+        }
+        nav a{
+            font-size: 0.75;
+        }
+        /*Aquí el main*/
+        /*Aquí rutas*/
+        #rutas{
+            background-color: #61867F;
+            padding: 2em;
+        }
+        section:first-child .container{
+            display: flex;
+            flex-wrap: wrap;
+            background-color: var(--verd);
+        }
+        .card_paises{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin: 1em;
+            align-items: center;
+            width: 300px;
+            padding: 0.25em;
+        }
+        .paises_img{
+            width: 250px;
+            height: 250px;
+        }
+        .paises_img img{
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 250px;
+            box-shadow: black 0px 0px 20px;
+        }
+        .card_paises header{
+            text-align: center;
+            margin-top: 0.75em;
+        }
+        .card_paises header h3{
+            color: white;
+            font-family: var(--krub);
+            font-weight: lighter;
+        }
+        .card_paises header blockquote{
+            font-family: var(--krub);
+            font-size: 0.5em;
+            color: white;
+        }
+        /*Aquí va ruta66*/
+        #RUTA66{
+            padding: 2.25em;
+        }
+        #RUTA66 .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        section:last-child{
+            height: 100%;
+            background-color: var(--blau1);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .ruta66 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-grow: 1;
+            max-width: 800px;
+            min-width: 250px;
+            min-height: 350px;
+            padding: 0.5em;
+            margin: 0.3em;
+            background-color: white;
+        }
+        @media (max-width:550px){
+        html{
+            font-size: 20px;
+        }
+        }
+    </style>    
+</head>
+    <body>
+        <header>
+            <div class="container">
+                <hgroup>
+                    <h1>LLocs del món</h1>
+                    <h2>Col·lecció gràfica de llocs per a viatgar</h2>
+                </hgroup>   
+                <nav>
+                    <a href="#">Ruta66</a>
+                    <a href="#">Grecia</a>
+                    <a href="#">Lanzarote</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="Rutas">
+                <div class="container">
+                    <div class="card_paises">
+                        <div class="paises_img">
+                            <img src="img/ruta 66/007.jpg">
+                        </div>
+                        <header>
+                            <h3>RUTA66</h3>
+                            <blockquote>
+                                En su trazado original , la Ruta 66 atravesaba ocho estados en diagonal: Illinois, Missouri, Kansas, Oklahoma, Texas, Nuevo México, Arizona y California. Prácticamente enlaza la Costa Este con la Costa Oeste de los Estados Unidos.
+                            </blockquote>
+                        </header>
+                    </div>
+                    <div class="card_paises">
+                        <div class="paises_img">
+                            <img src="img/grecia/002.jpg">
+                        </div>
+                        <header>
+                            <h3>GRECIA</h3>
+                            <blockquote>
+                                Grecia o República Helénica es un país soberano ubicado en el sureste de Europa y perteneciente a la Unión Europea. Actualmente está habitado por más de 10 millones de personas que en su mayoría hablan griego, el idioma oficial del país.
+                            </blockquote>
+                        </header>
+                    </div>
+                    <div class="card_paises">
+                        <div class="paises_img">
+                            <img src="img/lanzarote/008.jpg">
+                        </div>
+                        <header>
+                            <h3>LANZAROTE</h3>
+                            <blockquote>
+                                Lanzarote es la isla más septentrional del Archipiélago Canario, y cuenta con un pequeño archipiélago formado por los islotes de La Graciosa, Montaña Clara y Alegranza, el roque del Oeste y el del Este.
+                            </blockquote>
+                        </header>
+                    </div>
+                </div>
+            </section>
+            <section id="paises">
+                <div class="container">
+                    <div class="ruta66">
+                        <div class="ruta66_img">
+                            <img src="img/ruta 66/004.jpg" alt="">
+                        </div>
+                        <header>
+                            <h3>Moteles</h3>
+                        </header>
+                    </div>
+                    <div class="ruta66">
+                        <div class="ruta66_img">
+                            <img src="img/ruta 66/005.jpg" alt="">
+                        </div>
+                        <header>
+                            <h3>Restaurantes</h3>
+                        </header>
+                    </div>
+                    <div class="ruta66">
+                        <div class="ruta66_img">
+                            <img src="img/ruta 66/07 9.54.55.jpg" alt="">
+                        </div>
+                        <header>
+                            <h3>Rutas</h3>
+                        </header>
+                    </div>
+                    <div class="ruta66">
+                        <div class="ruta66_img">
+                            <img src="img/ruta 66/01.jpg" alt="">
+                        </div>
+                        <header>
+                            <h3>Paisajes</h3>
+                        </header>
+                    </div>
+                    <div class="ruta66">
+                        <div class="ruta66_img">
+                            <img src="img/ruta 66/02.jpg" alt="">
+                        </div>
+                        <header>
+                            <h3>Montañas</h3>
+                        </header>
+                    </div>
+                    <div class="ruta66">
+                        <div class="ruta66_img">
+                            <img src="img/ruta 66/06.jpg" alt="">
+                        </div>
+                        <header>
+                            <h3>Direcciones</h3>
+                        </header>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="#Sobre nosotros">
+        <h3>Contacto</h3>
+        <div class="container">
+            <p><a href="#">Twitter</a></p>
+            <p><a href="#">Instagram</a></p>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">E-mail</a></p>
+        </div>
+        </footer>
+    </body>
+</html>

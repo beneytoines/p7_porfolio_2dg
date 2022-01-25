@@ -1,0 +1,924 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio</title> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+
+    <style>
+        /*tamany macbook*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        :root{
+            --blau: #2D3743;
+            --lila: #98909F;
+            --nude: #FDF0DF;
+            --taronja: #F2D8C2;
+            --rosa: #D3AFAF;    
+        }
+        .container{
+            padding: 00.25em;
+        }
+        /*Ací va el header*/
+        body>header{
+            width: 100%;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: var(--nude);
+            height: 87vh;
+        }
+        h1{
+            font-family: 'El Messiri', sans-serif;
+            font-size: 36pt; 
+            color: var(--blau);
+        }
+        h2{
+            margin-top: 20em;
+            font-family: 'Marcellus', serif;
+            font-size: 14pt;
+            color: var(--lila);
+            justify-content: flex-start;
+            text-align: left;
+            padding-right: 500px;
+        }
+        h3{
+            font-family: 'El Messiri', sans-serif;
+            font-size: 12pt;
+            color: var(--nude);
+            margin-bottom: 1em;
+            
+        }
+        footer{
+            font-family: 'Marcellus', serif;
+            font-size: 12pt;
+            width: 100%;
+            background-color: var(--rosa);
+            padding: 20px;
+        }
+        footer nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        a{
+            align-items: center;
+            text-decoration: none;
+            color: var(--nude);
+            margin: 10px 0 0 20;
+            font-family: 'El Messiri', sans-serif;
+        }
+        /*Ací va el main*/
+        main{
+            background-color: var(--taronja);
+        }
+        .proyectos{
+            display: flex;
+            flex-direction: column;
+        }
+        h4{
+            font-family: 'El Messiri', sans-serif;
+            font-size: 36pt;
+            color: var(--rosa);
+        }
+        h5{
+            font-family: 'El Messiri', sans-serif;
+            font-size: 22pt;
+            color: var(--blau);
+        }
+        p{
+            font-family: 'Marcellus';
+            font-size: 16pt;
+            color:var(--lila);
+        }
+        /*Aquí todo el container01*/
+        .container01{
+            display: flex;
+            height: 50vh;
+            flex-direction: row;
+        }
+        .sitioweb_img{
+            width: 50%;
+            background-color: var(--taronja);
+            margin-left: 100px;
+        }
+        .container01 header{
+            display: flex;
+            width: 50%;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container01 header h4{
+            padding-left: 100px;
+            padding-right: 20px;
+        }
+        .container01 header blockquote{
+            text-align: left;
+        }
+        /*Aquí todo el container02*/
+        .container02 {
+            display: flex;
+            flex: wrap;
+            flex-direction: row;
+        }
+        .sitioweb_img_enlaces {
+            width: 80%;
+            background-color: var(--taronja);
+            margin-right: 100px;
+            margin-left: 0px;
+        }
+        .container02 header{
+            padding-right: 100px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container02 header h4{
+            padding-left: 0px;
+            padding-right: 20px;
+        }
+        .container02 header blockquote{
+            text-align: left;
+        }
+        /*Aquí todo el container03*/
+        .container03{
+            display: flex;
+            flex: wrap;
+            flex-direction: row;
+        }    
+        .img_video_audio{
+            width: 90%;
+            background-color: var(--taronja);
+            margin-left: 100px;
+        }
+        .container03 header{
+            padding-right: 100px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container03 header h4{
+            padding-left: 100px;
+            padding-right: 20px;
+        }
+        .container03 header blockquote{
+            text-align: left;
+        }
+        /*Aquí todo el container04*/
+        .container04{
+            display: flex;
+            flex: wrap;
+            flex-direction: row;
+        }
+        .gallery{
+            width: 108%;
+            background-color: var(--taronja);
+            margin-left: 0%;
+            margin-right: 100px;
+        }
+        .container04 header{
+            padding-right: 100px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container04 header h4{
+            padding-left: 0px;
+            padding-right: 20px;
+        }
+        .container04 header blockquote{
+            text-align: left;
+        }
+        /*Aquí todo el container05*/
+        .container05{
+            display: flex;
+            flex: wrap;
+            flex-direction: row;
+        }
+        .grid{
+            width: 133%;
+            background-color: var(--taronja);
+            margin-left: 100px;
+        }
+        .container05 header{
+            padding-right: 100px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container05 header h4{
+            padding-left: 100px;
+            padding-right: 20px;
+        }
+        .container05 header blockquote{
+            text-align: left;
+        }
+        /*Aquí todo el container06*/
+        .container06{
+            display: flex;
+            flex: wrap;
+            flex-direction: row;
+        }
+        .grid_neoplasticista{
+            width: 103%;
+            background-color: var(--taronja);
+            margin-left: 0%;
+            margin-right: 100px;
+        }
+        .container06 header{
+            padding-right: 100px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container06 header h4{
+            padding-left: 0px;
+            padding-right: 20px;
+        }
+        .container06 header blockquote{
+            text-align: left;
+        }
+        /*Aquí todo el container07*/
+        .container07{
+            display: flex;
+            flex: wrap;
+            flex-direction:row;
+        }
+        .porfolio{
+            width: 93%;
+            background-color: var(--taronja);
+            margin-left: 100px;
+        }
+        .container07 header{
+            padding-right: 100px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container07 header h4{
+            padding-left: 100px;
+            padding-right: 20px;
+        }
+        .container07 header blockquote{
+            text-align: left;
+        }
+        /*tamany ipad*/
+        @media (max-width: 1024px){
+            body{
+                background-color:var(--nude);
+            }
+            body>header{
+            width: 100%;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: var(--nude);
+            height: 87vh;
+        }
+        h1{
+            font-family: 'El Messiri', sans-serif;
+            font-size: 36pt; 
+            color: var(--blau);
+        }
+        h2{
+            margin-top: 10em;
+            font-family: 'Marcellus', serif;
+            font-size: 12pt;
+            color: var(--lila);
+            justify-content: flex-start;
+            text-align: left;
+            padding-right: 200px;
+        }
+        h3{
+            font-family: 'El Messiri', sans-serif;
+            font-size: 12pt;
+            color: var(--nude);
+            margin-bottom: 1em;
+            
+        }
+        footer{
+            font-family: 'Marcellus', serif;
+            font-size: 12pt;
+            width: 100%;
+            background-color: var(--rosa);
+            padding: 20px;
+        }
+        footer nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        a{
+            align-items: center;
+            text-decoration: none;
+            color: var(--nude);
+            margin: 10px 0 0 20;
+            font-family: 'El Messiri', sans-serif;
+        }
+        /*Ací va el main*/
+        main{
+            background-color: var(--taronja);
+        }
+        h4{
+            font-family: 'El Messiri', sans-serif;
+            font-size: 26pt;
+            color: var(--rosa);
+        }
+        h5{
+            font-family: 'El Messiri', sans-serif;
+            font-size: 12pt;
+            color: var(--blau);
+        }
+        p{
+            font-family: 'Marcellus';
+            font-size: 12pt;
+            color:var(--lila);
+        }
+        /*Aquí todo el container01*/
+        .container01{
+            display: flex;
+            flex: wrap;
+            flex-direction: row;
+        }
+        .sitioweb_img{
+            width: 100%;
+            background-color: var(--taronja);
+            margin-left: 100px;
+        }
+        .container01 header{
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container01 header h4{
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+        .container01 header blockquote{
+            text-align: left;
+        }
+        /*Aquí el container02*/
+        .container02 {
+            display: flex;
+            flex: wrap;
+            flex-direction: row;
+        }
+        .sitioweb_img_enlaces {
+            width: 150%;
+            background-color: var(--taronja);
+            margin-right: 100px;
+            margin-left: 0px;
+        }
+        .container02 header{
+            padding-right: 100px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container02 header h4{
+            padding-left: 0px;
+            padding-right: 10px;
+        }
+        .container02 header blockquote{
+            text-align: left;
+        }
+        /*Aquí el container 03*/
+        .container03{
+            display: flex;
+            flex: wrap;
+            flex-direction: row;
+        }    
+        .img_video_audio{
+            width: 150%;
+            background-color: var(--taronja);
+            margin-left: 10px;
+        }
+        .container03 header{
+            padding-right: 100px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container03 header h4{
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+        .container03 header blockquote{
+            text-align: left;
+        }
+        /*Aquí el container04*/
+        .container04{
+            display: flex;
+            flex: wrap;
+            flex-direction: row;
+        }
+        .gallery{
+            width: 200%;
+            background-color: var(--taronja);
+            margin-left: 0%;
+            margin-right: 100px;
+        }
+        .container04 header{
+            padding-right: 100px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container04 header h4{
+            padding-left: 0px;
+            padding-right: 20px;
+        }
+        .container04 header blockquote{
+            text-align: left;
+        }
+        /*Aquí el container 05*/
+        .container05{
+            display: flex;
+            flex: wrap;
+            flex-direction: row;
+        }
+        .grid{
+            width: 200%;
+            background-color: var(--taronja);
+            margin-left: 100px;
+        }
+        .container05 header{
+            padding-right: 10px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container05 header h4{
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+        .container05 header blockquote{
+            text-align: left;
+        }
+        /*Aquí todo el container06*/
+        .container06{
+            display: flex;
+            flex: wrap;
+            flex-direction: row;
+        }
+        .grid_neoplasticista{
+            width: 130%;
+            background-color: var(--taronja);
+            margin-left: 0%;
+            margin-right: 100px;
+        }
+        .container06 header{
+            padding-right: 10px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container06 header h4{
+            padding-left: 0px;
+            padding-right: 20px;
+        }
+        .container06 header blockquote{
+            text-align: left;
+        }
+        /*Aquí todo el container07*/
+        .container07{
+            display: flex;
+            flex: wrap;
+            flex-direction:row;
+        }
+        .porfolio{
+            width: 132%;
+            background-color: var(--taronja);
+            margin-left: 100px;
+        }
+        .container07 header{
+            padding-right: 10px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container07 header h4{
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+        .container07 header blockquote{
+            text-align: left;
+        }
+        /*tamany iphone*/
+        @media (max-width: 600px){
+            body{
+                background-color:var(--nude);
+            }
+            body{
+                background-color:var(--nude);
+            }
+            body>header{
+            width: 100%;
+            max-width: 100%;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: var(--nude);
+            height: 100%;
+        }
+        h1{
+            font-family: 'El Messiri', sans-serif;
+            font-size: 36pt; 
+            color: var(--blau);
+        }
+        h2{
+            margin-top: 20em;
+            font-family: 'Marcellus', serif;
+            font-size: 14pt;
+            color: var(--lila);
+            justify-content: flex-start;
+            text-align: left;
+            padding-right: 10px;
+        }
+        h3{
+            font-family: 'El Messiri', sans-serif;
+            font-size: 12pt;
+            color: var(--nude);
+            margin-bottom: 1em;
+            
+        }
+        footer{
+            font-family: 'Marcellus', serif;
+            font-size: 12pt;
+            width: 100%;
+            background-color: var(--rosa);
+            padding: 20px;
+        }
+        footer nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        a{
+            align-items: center;
+            text-decoration: none;
+            color: var(--nude);
+            margin: 10px 0 0 20;
+            font-family: 'El Messiri', sans-serif;
+        }
+        /*Ací va el main*/
+        main{
+            background-color: var(--taronja);
+        }
+        h4{
+            font-family: 'El Messiri', sans-serif;
+            font-size: 26pt;
+            color: var(--rosa);
+        }
+        h5{
+            font-family: 'El Messiri', sans-serif;
+            font-size: 12pt;
+            color: var(--blau);
+        }
+        p{
+            font-family: 'Marcellus';
+            font-size: 12pt;
+            color:var(--lila);
+        }
+        /*Aquí todo el container01*/
+        .container01{
+            display: flex;
+            flex: wrap;
+            flex-direction: column;
+        }
+        .sitioweb_img{
+            width: 100%;
+            background-color: var(--taronja);
+            margin-left: 0px;
+        }
+        .container01 header{
+            display: flex;
+            padding-top: 2em;
+            padding-bottom: 2em;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container01 header h4{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .container01 header blockquote{
+            text-align: left;
+        }
+        /*Aquí el container02*/
+        .container02 {
+            display: flex;
+            flex: wrap;
+            flex-direction: column;
+        }
+        .sitioweb_img_enlaces {
+            width: 100%;
+            background-color: var(--taronja);
+            margin-right: 100px;
+            margin-left: 0px;
+        }
+        .container02 header{
+            padding-top: 2em;
+            padding-bottom: 2em;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container02 header h4{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .container02 header blockquote{
+            text-align: left;
+        }
+        /*Aquí el container 03*/
+        .container03{
+            display: flex;
+            flex: wrap;
+            flex-direction: column;
+        }    
+        .img_video_audio{
+            width: 100%;
+            background-color: var(--taronja);
+            margin-left: 0px;
+        }
+        .container03 header{
+            padding-top: 2em;
+            padding-bottom: 2em;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container03 header h4{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .container03 header blockquote{
+            text-align: left;
+        }
+        /*Aquí el container04*/
+        .container04{
+            display: flex;
+            flex: wrap;
+            flex-direction: column;
+        }
+        .gallery{
+            width: 100%;
+            background-color: var(--taronja);
+            margin-left: 0%;
+            margin-right: 0px;
+        }
+        .container04 header{
+            padding-top: 2em;
+            padding-bottom: 2em;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container04 header h4{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .container04 header blockquote{
+            text-align: left;
+        }
+        /*Aquí el container 05*/
+        .container05{
+            display: flex;
+            flex: wrap;
+            flex-direction: column;
+        }
+        .grid{
+            width: 100%;
+            background-color: var(--taronja);
+            margin-left: 0;
+            margin-right: 0%;
+        }
+        .container05 header{
+            padding-top: 2em;
+            padding-bottom: 2em;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container05 header h4{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .container05 header blockquote{
+            text-align: left;
+        }
+        /*Aquí todo el container06*/
+        .container06{
+            display: flex;
+            flex: wrap;
+            flex-direction: column;
+        }
+        .grid_neoplasticista{
+            width: 100%;
+            background-color: var(--taronja);
+            margin-left: 0%;
+            margin-right: 100px;
+        }
+        .container06 header{
+            padding-top: 2em;
+            padding-bottom: 2em;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container06 header h4{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .container06 header blockquote{
+            text-align: left;
+        }
+        /*Aquí todo el container07*/
+        .container07{
+            display: flex;
+            flex: wrap;
+            flex-direction:column;
+        }
+        .porfolio{
+            width: 100%;
+            background-color: var(--taronja);
+            margin-left: 0px;
+        }
+        .container07 header{
+            padding-top: 2em;
+            padding-bottom: 2em;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container07 header h4{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .container07 header blockquote{
+            text-align: left;
+        }
+    </style>
+    <body>
+        <header>
+            <div class="container">
+                <hgroup>
+                    <h1>PORFOLIO</h1>
+                </hgroup>
+                <hgroup>
+                    <h2>Hola!  Soy Inés Beneyto García, estoy graduada en Técnica Superior de Estilismo, y actualmente estoy cursando los estudios superiores de Diseño Gráfico en la EASD Alcoy. En este porfolio vamos a ver los trabajos realizados para la asignatura de Sistemas de Representación. </h2>
+                </hgroup>
+            </div>
+        </header>
+        <footer>
+            <div class="container">
+                <h3>Redes Sociales</h3>
+                <nav>
+                    <a href="https://www.instagram.com/begainn/?hl=es">Instagram</a>
+                    <a href="https://github.com/beneytoines">Github</a>
+                    <a href="https://www.behance.net/insbeneyto">Behance</a>
+                </nav>
+            </div>
+        </footer>
+        <main>
+            <section id="proyectos">
+                <div class="container01">
+                    <header>
+                        <h4>p01</h4>
+                        <blockquote>
+                            <h5>Sitioweb</h5>
+                                <p>
+                                "En este ejercicio ponemos en práctica los conceptos básicos de html."
+                                </p>
+                        </blockquote>
+                    </header>
+                    <div class="sitioweb_img">
+                        <a href="https://beneytoines.github.io/1_Llocweb_2dg/"><img src="img/01_llocweb.png"></a>
+                    </div>
+                </div>
+                <div class="container02">
+                    <div class="sitioweb_img_enlaces">
+                        <a href="https://beneytoines.github.io/2_llocweb_img/"><img src="img/02_llocweb_enlace.png"></a>
+                    </div>
+                    <header>
+                        <h4>p02</h4>
+                        <blockquote>
+                        <h5>Sitioweb_img_enlaces</h5>
+                        <p>
+                            "En este ejercicio, completamos el anterior añadiendo enlaces que nos lleven a otros sitios web."
+                        </p>
+                        </blockquote>
+                    </header>
+                </div>
+                <div class="container03">
+                    <header>
+                        <h4>p03</h4>
+                        <blockquote>
+                        <h5>Img_video_audio</h5>
+                        <p>
+                            "Con este ejercicio aprendemos además de poner enlaces, a poner vídeos, imágenes y audio."
+                        </p>
+                        </blockquote>
+                    </header>
+                    <div class="img_video_audio">
+                        <a href="https://beneytoines.github.io/p3_img_video_audio_css_2dg/"><img src="img/03_img_audio_video.png"></a>
+                    </div>
+                </div>
+                <div class="container04">
+                    <div class="gallery">
+                        <a href="https://beneytoines.github.io/p4_gallery_2dg/"><img src="img/04_gallery.png"></a>
+                    </div>
+                    <header>
+                        <h4>p04</h4>
+                        <blockquote>
+                        <h5>Gallery</h5>
+                        <p>
+                            "Con este ejercicio aprendemos a utilizar el grid, junto con el ccs y todo lo aprendido anteriormente para crear una web completa."
+                        </p>
+                        </blockquote>
+                    </header>
+                </div>
+                <div class="container05">
+                    <header>
+                        <h4>p05</h4>
+                        <blockquote>
+                        <h5>Grid</h5>
+                        <p>
+                            "Con este ejercicio aprendemos a utilizar el grid template y que cambie de tamaño en función del tamaño de las pantallas desde donde se visualiza."
+                        </p>
+                        </blockquote>
+                    </header>
+                    <div class="grid">
+                        <a href="https://beneytoines.github.io/p5_grid_2dg/"><img src="img/05_grid.png"></a>
+                    </div>
+                </div>
+                <div class="container06">
+                    <div class="grid_neoplasticista">
+                        <a href="https://beneytoines.github.io/p6_grid_neoplasticista_2dg/"><img src="img/06_neoplasticisme.png"></a>
+                    </div>
+                    <header>
+                        <h4>p06</h4>
+                        <blockquote>
+                        <h5>Grid Neoplasticista</h5>
+                        <p>
+                            "Con este ejercicio completamos en anterior trabajando la función grid -template para organizar el contenido en retículas."
+                        </p>
+                        </blockquote>
+                    </header>
+                </div>
+                <div class="container07">
+                    <header>
+                        <h4>p07</h4>
+                        <blockquote>
+                        <h5>Porfolio</h5>
+                        <p>
+                            "En este ejercicio mostramos todo lo aprendido durante el curso mediante los trabajos realizados."
+                        </p>
+                        </blockquote>
+                    </header>
+                    <div class="porfolio">
+                        <a href="https://beneytoines.github.io/p7_porfolio_2dg/"><img src="img/07_porfolio.png"></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
